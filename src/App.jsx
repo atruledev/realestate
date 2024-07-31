@@ -1,17 +1,49 @@
 
 import './App.css'
-import Header from './Components/Header'
-import Hero from './Components/Hero'
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
+import Home from './Pages/Home';
+import List from './Pages/List';
+import Layout from './Components/Layout/Layout';
+
+
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: '/list',
+          element: <List />
+        },
 
-  return (
-    <>
-      <Header/>
-      <Hero />
-    </>
-  )
+      ]
+         
+    }
+         
+   
+    
+  ]);
+  
+  createRoot(document.getElementById("root")).render(
+    <RouterProvider router={router} />
+  );
+
+
+
 }
 
 export default App
