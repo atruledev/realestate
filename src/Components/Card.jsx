@@ -4,7 +4,7 @@ import Bed from "../assets/images/bed.png";
 import Bath from "../assets/images/bath.png";
 
 function Card({ CardName, cardLocation, Price, bathDesc, BedDesc, img, id, a }) {
-    console.log("sdds", id)
+    console.log("sdds", img)
   return (
    
     <div key={id || a} className="md:m-12">
