@@ -7,7 +7,7 @@ function Card({ CardName, cardLocation, Price, bathDesc, BedDesc, img, id, a }) 
     console.log("sdds", img)
   return (
    
-    <div key={id || a} className="md:m-12">
+    <div key={id || a} className="md:m-12 p-5 md:p-0">
       <a
         href="#"
         class="flex flex-col items-center bg-white  md:flex-row  hover:bg-gray-100 "

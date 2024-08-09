@@ -12,6 +12,8 @@ import Home from './Pages/Home';
 import List from './Pages/List';
 import Layout from './Components/Layout/Layout';
 import Slider from './Components/Slider';
+import Default from './Pages/Default';
+import Profile from './Pages/Profile';
 
 
 
@@ -30,6 +32,10 @@ function App() {
           path: '/list',
           element: <List />
         },
+        {
+          path: '/profile',
+          element: <Profile />
+        },
        
 
       ]
@@ -38,6 +44,10 @@ function App() {
     {
       path: '/slider',
       element: <Slider />
+    },
+    {
+      path: '*',
+      element: <Default />
     },
          
    

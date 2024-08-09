@@ -7,13 +7,11 @@ function Slider() {
 
     const images = listData.map((f)=> f.img)
     console.log("length", images.length)
-    useEffect(()=>{
-      
+    useEffect(()=>{      
         setimageSlide(images)
     }, [])
     
     const handleNextClick = ()=>{
-        
         setImageIndex(imageIndex+1)
 
     }
