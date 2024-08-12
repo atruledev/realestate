@@ -14,7 +14,7 @@ import Layout from './Components/Layout/Layout';
 import Slider from './Components/Slider';
 import Default from './Pages/Default';
 import Profile from './Pages/Profile';
-
+import Single from "./Pages/Single"
 
 
 function App() {
@@ -31,6 +31,10 @@ function App() {
         {
           path: '/list',
           element: <List />
+        },
+        {
+          path: '/single',
+          element: <Single />
         },
         {
           path: '/profile',
