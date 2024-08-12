@@ -36,7 +36,7 @@ function Single() {
             />
           </div>
 
-          <div class="lg:w-2/3 w-full lg:py-6 mt-6 lg:mt-0">
+          <div class="lg:w-2/3 w-full  mt-6 lg:mt-0">
             <div class="flex flex-row justify-between items-start">
               <div class="flex flex-col">
                 <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
@@ -58,8 +58,6 @@ function Single() {
               </div>
             </div>
           </div>
-          <div></div>
-
           <div>
             <p class="leading-relaxed pr-60">
               Fam locavore kickstarter distillery. Mixtape chillwave tumeric
