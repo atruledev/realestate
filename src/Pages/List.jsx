@@ -12,7 +12,7 @@ function List() {
         <div className="space-y-4">
           <Filter />
           {listData.map((d, index)=> {
-           return  <Card  CardName={d.title} cardLocation={d.address} Price={d.price} bathDesc={d.bathroom} BedDesc={d.bedroom} img={d.img} id={d.id} a={index} />
+           return  <Card key={d.id} list={d}  CardName={d.title} cardLocation={d.address} Price={d.price} bathDesc={d.bathroom} BedDesc={d.bedroom} img={d.img} id={d.id} a={index} />
           })}
           </div>
         </div>

@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 function Filter() {
   return (
     <>
-      <div className="flex flex-col mx-2 sm:mx-16">
+      <div className="flex flex-col mx-2 sm:mx-12">
         <div className="flex-col ">
           <div className="text-2xl  mb-2 ">
             <h1>Search Results For</h1>

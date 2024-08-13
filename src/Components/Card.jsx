@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import Pin from "../assets/images/pin.png";
 import Bed from "../assets/images/bed.png";
 import Bath from "../assets/images/bath.png";
+import { useNavigate } from "react-router-dom";
+import { ListContext } from "./Context/contex";
 
-function Card({ CardName, cardLocation, Price, bathDesc, BedDesc, img, id, a }) {
-    console.log("sdds", img)
+function Card({ CardName, cardLocation, Price, bathDesc, BedDesc, img, id, a, list }) {
+  const navigate = useNavigate();
+  const  {setList}  = useContext(ListContext)
+
+  const handleNavigate = () => {
+    console.log(setList)
+    if (setList) {
+      setList(list);
+      navigate(`/list/${id}`);
+    } else {
+      console.error("setList is undefined.");
+    }
+  }
   return (
    
-    <div key={id || a} className="md:m-12 p-5 md:p-0">
+    <div key={id || a} className="md:m-12 p-5 md:p-0" onClick={handleNavigate} >
       <a
-        href="#"
+        
         class="flex flex-col items-center bg-white  md:flex-row  hover:bg-gray-100 "
       >
         <img
-          class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+          class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 rounded-none md:rounded-s-lg"
           src={img}
           alt=""
         />

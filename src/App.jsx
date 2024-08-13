@@ -15,7 +15,7 @@ import Slider from './Components/Slider';
 import Default from './Pages/Default';
 import Profile from './Pages/Profile';
 import Single from "./Pages/Single"
-
+import  {ListProvider}  from './Components/Context/contex.jsx'
 
 function App() {
 
@@ -33,7 +33,7 @@ function App() {
           element: <List />
         },
         {
-          path: '/single',
+          path: '/list/:id',
           element: <Single />
         },
         {
@@ -59,7 +59,9 @@ function App() {
   ]);
   
   createRoot(document.getElementById("root")).render(
+    <ListProvider>
     <RouterProvider router={router} />
+    </ListProvider>
   );
 
 
